@@ -1,8 +1,8 @@
 {
 	"name": "video_pause",
 	"version": "1.0.0",
-	"private": true,
-	"description": "",
+	"private": false,
+	"description": "暫停不在view中的影片",
 	"author": "Exinfinite Chen <chen.min.home@gmail.com>",
 	"browserslist": [
 		"> 1%",
