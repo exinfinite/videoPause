@@ -15,7 +15,7 @@ export default class viewObserver {
         }, this.cfg);
     }
     observe(
-        $els: Element[]/* NodeListOf<HTMLElement> */,
+        $els: Element[],
         cb: (entry: IntersectionObserverEntry) => void
     ): void {
         const observer = this.obInit(cb);
