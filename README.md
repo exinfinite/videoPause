@@ -1,4 +1,4 @@
-# Video Pause
+# Video Pause by Intersection Observer
 
 ## 範例及代碼
 
