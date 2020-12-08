@@ -66,8 +66,12 @@
                 src="https://www.youtube.com/embed/tgbNymZ7vqY?enablejsapi=1&autoplay=1&mute=1"></iframe>
         </div>
     </div>
+    <script src="https://exinfinite.netlify.app/js/main.js"></script>
     <script src="../dist/video-pause.js"></script>
-    <script>vid_pause.init({threshold: 0.5});
+    <script>
+        vid_pause.init({
+            options: { threshold: 0.5 }
+        });
     </script>
 </body>
 
