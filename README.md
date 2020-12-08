@@ -1,7 +1,7 @@
 # Video Pause & Play by IntersectionObserver
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/exinfinite/videoPause)
-![GitHub file size in bytes](https://img.shields.io/github/size/exinfinite/videoPause/dist/video-pause.js)
+![GitHub file size in bytes](https://img.shields.io/github/size/exinfinite/videoPause/dist/video-pause.prod.js)
 ![GitHub](https://img.shields.io/github/license/exinfinite/videoPause)
 
 ## 範例及代碼
@@ -15,9 +15,9 @@ vid_pause.init({
 //options 參考 https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_concepts_and_usage
 ```
 
-[Example](https://github.com/exinfinite/videoPause/blob/main/example/index.html)
+[Example](https://github.com/exinfinite/videoPause/tree/main/example)
 
-[Production](https://github.com/exinfinite/videoPause/blob/main/dist/video-pause.js)
+[Production](https://github.com/exinfinite/videoPause/blob/main/dist/video-pause.prod.js)
 
 ## Development with webpack-dev-server
 

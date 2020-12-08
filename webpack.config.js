@@ -28,22 +28,22 @@ module.exports = {
 		'video-pause': path.join(__dirname, "./src/main.ts"),
 	},
 	output: {
-		filename: "[name].js",
-		path: path.resolve(__dirname, "./dist"),
+		filename: _is_prod ? "[name].prod.js" : "[name].dev.js",
+		path: _is_prod ? path.resolve(__dirname, "./dist") : path.resolve(__dirname, "./example"),
 		publicPath: 'dist/',
 		libraryTarget: 'umd',
 		globalObject: 'this',
 		chunkFilename: '[name].chunk.js'
 	},
 	devServer: {
-		contentBase: path.join(__dirname, 'test'),
+		contentBase: path.join(__dirname, 'example'),
 		index: 'index.html',
 		port: 3000,
 		open: true,
 		compress: true
 	},
 	optimization: {
-		minimize: _is_prod,
+		minimize: true,
 		minimizer: [
 			new TerserPlugin({
 				cache: true,
