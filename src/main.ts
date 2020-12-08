@@ -2,25 +2,32 @@
  * 暫停未在view中的影片
  */
 import view_obsrv from "./viewObserver";
-export class vidPause {
+class vidPause {
     private obsrv: view_obsrv;
-    init(cfg: IntersectionObserverInit = {}) {
-        this.obsrv = new view_obsrv(cfg);
-        this.html5();
-        this.yt();
-        return this;
+    init({ html5 = true, yt = true, options = <IntersectionObserverInit>{} }) {
+        this.obsrv = new view_obsrv(options);
+        html5 ? this.html5() : '';
+        yt ? this.yt() : '';
+        return { ...this };
     }
     /**
      * html5影片
      */
     html5() {
+        const state = {
+            HAVE_NOTHING: 0,
+            HAVE_METADATA: 1,
+            HAVE_CURRENT_DATA: 2,
+            HAVE_FUTURE_DATA: 3,
+            HAVE_ENOUGH_DATA: 4
+        };
         this.obsrv.observe(Array.from(document.querySelectorAll("video")), entry => {
             let vid = <HTMLVideoElement>entry.target;
             if (!entry.isIntersecting) {
-                return vid.readyState == 4 ? vid.pause() : '';
+                return vid.readyState == state.HAVE_ENOUGH_DATA ? vid.pause() : '';
             }
             if (!!vid.autoplay) {
-                vid.readyState == 4 ? vid.play() : '';
+                return vid.readyState == state.HAVE_ENOUGH_DATA ? vid.play() : '';
             }
         });
     }
