@@ -3,6 +3,7 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/exinfinite/videoPause)
 ![GitHub file size in bytes](https://img.shields.io/github/size/exinfinite/videoPause/dist/video-pause.prod.js)
 ![GitHub](https://img.shields.io/github/license/exinfinite/videoPause)
+![GitHub all releases](https://img.shields.io/github/downloads/exinfinite/videoPause/total)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9a17e564-c8ed-45f1-aeb7-70e05db45502/deploy-status)](https://app.netlify.com/sites/video-pause/deploys)
 
 ## 範例及代碼
