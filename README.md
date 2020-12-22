@@ -15,12 +15,15 @@
 [Production](https://github.com/exinfinite/videoPause/blob/main/dist/video-pause.prod.js)
 
 ```javascript
+<script src='./dist/video-pause.prod.js'></script>
+<script>
 vid_pause.init({
     html5: true,//default
     yt: true,//default
     options: { threshold: 0.5 }
 });
 //options 參考 https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_concepts_and_usage
+</script>
 ```
 
 ## Development with webpack-dev-server
